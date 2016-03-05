@@ -38,13 +38,13 @@ def hit?(card_count)
   prompt_user
   answer = get_user_input
 
-  if answer == "s"
-    return card_count
-  elsif answer == "h"
+  if answer == "h"
     hit_me = deal_card
     new_hand = card_count += hit_me
     new_hand
     return new_hand
+  elsif answer == "s"
+    return card_count
   elsif (answer != "h") && (answer != "s")
     invalid_command
     return card_count
